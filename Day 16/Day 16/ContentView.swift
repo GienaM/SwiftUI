@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var tapCount: Int = 0
     @State private var name: String = ""
     private let students: [String] = ["Michael", "Peter", "John"]
-    @State private var selectedStudent: String = "Michael"
+    @State private var selectedStudentIndex: Int = 0
     
     var body: some View {
         NavigationView {
@@ -39,7 +39,7 @@ struct ContentView: View {
                     }
                 }
                 Section {
-                    Picker("Select your student", selection: $selectedStudent) {
+                    Picker("Select your student", selection: $selectedStudentIndex) {
                         ForEach(0..<students.count) {
                             Text(self.students[$0])
                         }
