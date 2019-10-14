@@ -24,7 +24,7 @@ struct ContentView: View {
     // MARK: - Private properties
     
     @State private var checkAmount: String = ""
-    @State private var numberOfPeopleIndex: Int = 1
+    @State private var numberOfPeople: String = ""
     @State private var tipPercentageIndex: Int = 0
     
     private let tipPercentages: [Int] = [0, 5, 10, 15, 20]
@@ -46,7 +46,10 @@ struct ContentView: View {
     }
     
     private var totalPricePerPerson: NSDecimalNumber {
-        let peopleCount = NSDecimalNumber(integerLiteral: numberOfPeopleIndex + 2)
+        guard let numberOfPeopleInteger = Int(numberOfPeople) else {
+            return .zero
+        }
+        let peopleCount = NSDecimalNumber(integerLiteral: numberOfPeopleInteger)
         let grandTotal = checkAmountValue.adding(tipValue)
         let roundingBehavior = NSDecimalNumberHandler(roundingMode: .up, scale: 2, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
         
@@ -58,14 +61,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section {
+                Section(header: Text("Enter the amount you want to split:")) {
                     TextField("Amount", text: $checkAmount)
                         .keyboardType(.decimalPad)
-                    Picker("Number of people", selection: $numberOfPeopleIndex) {
-                        ForEach(2..<16) {
-                            Text("\($0) people")
-                        }
-                    }
+                }
+                Section(header: Text("Enter the number of pepople you want to split the check with:")) {
+                    TextField("Number of people", text: $numberOfPeople)
+                        .keyboardType(.numberPad)
                 }
                 Section(header: Text("How much tip do you want to leave?")) {
                     Picker("Tip percentage", selection: $tipPercentageIndex) {
@@ -74,18 +76,19 @@ struct ContentView: View {
                         }
                     }.pickerStyle(SegmentedPickerStyle())
                 }
-                Section(header: Text("Price per person:")) {
+                Section(header: Text("Amount per person:")) {
                     Text("\(totalPricePerPerson.localizedCurrencyString)")
                 }
                 Section(header: Text("Tip total:")) {
                     Text("\(tipValue.localizedCurrencyString)")
                 }
-                Section(header: Text("Total price:")) {
+                Section(header: Text("Total amount*:"),
+                        footer: Text("* including tip")) {
                     Text("\(checkAmountValue.adding(tipValue).localizedCurrencyString)")
                 }
             }
             .navigationBarTitle("We split")
-        }
+        }.colorScheme(.dark)
     }
 }
 
