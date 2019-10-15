@@ -7,4 +7,7 @@
    <FileRef
       location = "group:WeSplit/WeSplit.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Day 19 Unit Converter/Day 19 Unit Converter.xcodeproj">
+   </FileRef>
 </Workspace>
