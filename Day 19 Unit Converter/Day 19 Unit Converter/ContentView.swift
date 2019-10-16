@@ -52,7 +52,7 @@ struct ContentView: View {
     private var units = SpeedUnit.allCases
     
     private var convertionResult: Double {
-        guard let inputDoubleValue = Double(textInput),
+        guard let inputDoubleValue = Double(textInput.replacingOccurrences(of: ",", with: ".")),
             inputDoubleValue.isNaN == false else {
                 return .zero
         }

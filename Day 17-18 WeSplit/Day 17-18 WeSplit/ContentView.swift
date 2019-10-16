@@ -30,7 +30,7 @@ struct ContentView: View {
     private let tipPercentages: [Int] = [0, 5, 10, 15, 20]
     
     private var checkAmountValue: NSDecimalNumber {
-        guard let amountDoubleValue = Double(checkAmount),
+        guard let amountDoubleValue = Double(checkAmount.replacingOccurrences(of: ",", with: ".")),
             amountDoubleValue.isNaN == false else {
                 return .zero
         }

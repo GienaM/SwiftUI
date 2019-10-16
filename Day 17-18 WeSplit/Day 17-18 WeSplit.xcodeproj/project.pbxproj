@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		91E5F38423527DC5001B005E /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E5F38423527DC5001B005E /* Day 17-18 WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 17-18 WeSplit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E5F38723527DC5001B005E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E5F38923527DC5001B005E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		91E5F38B23527DC5001B005E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		91E5F37B23527DC5001B005E = {
 			isa = PBXGroup;
 			children = (
-				91E5F38623527DC5001B005E /* WeSplit */,
+				91E5F38623527DC5001B005E /* Day 17-18 WeSplit */,
 				91E5F38523527DC5001B005E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		91E5F38523527DC5001B005E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				91E5F38423527DC5001B005E /* WeSplit.app */,
+				91E5F38423527DC5001B005E /* Day 17-18 WeSplit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		91E5F38623527DC5001B005E /* WeSplit */ = {
+		91E5F38623527DC5001B005E /* Day 17-18 WeSplit */ = {
 			isa = PBXGroup;
 			children = (
 				91E5F38723527DC5001B005E /* AppDelegate.swift */,
@@ -64,7 +64,7 @@
 				91E5F39523527DC7001B005E /* Info.plist */,
 				91E5F38F23527DC7001B005E /* Preview Content */,
 			);
-			path = WeSplit;
+			path = "Day 17-18 WeSplit";
 			sourceTree = "<group>";
 		};
 		91E5F38F23527DC7001B005E /* Preview Content */ = {
@@ -78,9 +78,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		91E5F38323527DC5001B005E /* WeSplit */ = {
+		91E5F38323527DC5001B005E /* Day 17-18 WeSplit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91E5F39823527DC7001B005E /* Build configuration list for PBXNativeTarget "WeSplit" */;
+			buildConfigurationList = 91E5F39823527DC7001B005E /* Build configuration list for PBXNativeTarget "Day 17-18 WeSplit" */;
 			buildPhases = (
 				91E5F38023527DC5001B005E /* Sources */,
 				91E5F38123527DC5001B005E /* Frameworks */,
@@ -90,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = WeSplit;
+			name = "Day 17-18 WeSplit";
 			productName = WeSplit;
-			productReference = 91E5F38423527DC5001B005E /* WeSplit.app */;
+			productReference = 91E5F38423527DC5001B005E /* Day 17-18 WeSplit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 91E5F37F23527DC5001B005E /* Build configuration list for PBXProject "WeSplit" */;
+			buildConfigurationList = 91E5F37F23527DC5001B005E /* Build configuration list for PBXProject "Day 17-18 WeSplit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				91E5F38323527DC5001B005E /* WeSplit */,
+				91E5F38323527DC5001B005E /* Day 17-18 WeSplit */,
 			);
 		};
 /* End PBXProject section */
@@ -285,9 +285,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WeSplit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WeSplit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Day 17-18 WeSplit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,9 +304,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WeSplit/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WeSplit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Day 17-18 WeSplit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		91E5F37F23527DC5001B005E /* Build configuration list for PBXProject "WeSplit" */ = {
+		91E5F37F23527DC5001B005E /* Build configuration list for PBXProject "Day 17-18 WeSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91E5F39623527DC7001B005E /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91E5F39823527DC7001B005E /* Build configuration list for PBXNativeTarget "WeSplit" */ = {
+		91E5F39823527DC7001B005E /* Build configuration list for PBXNativeTarget "Day 17-18 WeSplit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91E5F39923527DC7001B005E /* Debug */,

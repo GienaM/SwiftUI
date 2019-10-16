@@ -5,9 +5,12 @@
       location = "group:Day 16/Day 16.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:WeSplit/WeSplit.xcodeproj">
+      location = "group:Day 17-18 WeSplit/Day 17-18 WeSplit.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Day 19 Unit Converter/Day 19 Unit Converter.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Day 20-22 GuessTheFlag/Day 20-22 GuessTheFlag.xcodeproj">
    </FileRef>
 </Workspace>
