@@ -13,4 +13,7 @@
    <FileRef
       location = "group:Day 20-22 GuessTheFlag/Day 20-22 GuessTheFlag.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Day 23-24 ViewsAndModifiers/Day 23-24 ViewsAndModifiers.xcodeproj">
+   </FileRef>
 </Workspace>
