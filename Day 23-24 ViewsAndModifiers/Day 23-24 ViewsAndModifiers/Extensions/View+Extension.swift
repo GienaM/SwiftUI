@@ -16,4 +16,8 @@ extension View {
     func watermaked(with text: String) -> some View {
         self.modifier(Watermark(text: text))
     }
+    
+    func blueFontStyle() -> some View {
+        self.modifier(BlueFont())
+    }
 }

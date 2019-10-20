@@ -29,6 +29,7 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.red)
                     .edgesIgnoringSafeArea(.all)
+                    .blueFontStyle()
             }
             Section {
                 Button("Hello world") {

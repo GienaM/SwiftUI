@@ -18,6 +18,7 @@
 		9131035D235BB1190083D949 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131035C235BB1190083D949 /* Title.swift */; };
 		9131035F235BB1300083D949 /* Watermark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9131035E235BB1300083D949 /* Watermark.swift */; };
 		91310361235BB1510083D949 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91310360235BB1510083D949 /* View+Extension.swift */; };
+		91E2D938235CECB2005015D4 /* BlueFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2D937235CECB2005015D4 /* BlueFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9131035C235BB1190083D949 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		9131035E235BB1300083D949 /* Watermark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watermark.swift; sourceTree = "<group>"; };
 		91310360235BB1510083D949 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		91E2D937235CECB2005015D4 /* BlueFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				9131035C235BB1190083D949 /* Title.swift */,
 				9131035E235BB1300083D949 /* Watermark.swift */,
+				91E2D937235CECB2005015D4 /* BlueFont.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				91310345235B9B910083D949 /* SceneDelegate.swift in Sources */,
 				91310361235BB1510083D949 /* View+Extension.swift in Sources */,
 				91310357235BAAD60083D949 /* GridStack.swift in Sources */,
+				91E2D938235CECB2005015D4 /* BlueFont.swift in Sources */,
 				9131035A235BB0ED0083D949 /* CapsuleText.swift in Sources */,
 				9131035F235BB1300083D949 /* Watermark.swift in Sources */,
 				9131035D235BB1190083D949 /* Title.swift in Sources */,

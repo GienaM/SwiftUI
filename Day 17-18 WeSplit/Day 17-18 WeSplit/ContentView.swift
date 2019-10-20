@@ -8,17 +8,6 @@
 
 import SwiftUI
 
-extension NSDecimalNumber {
-    var localizedCurrencyString: String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.locale = Locale(identifier: "pl-PL") // .current
-        numberFormatter.numberStyle = .currency
-        
-        return numberFormatter.string(from: self) ?? ""
-    }
-}
-
-
 struct ContentView: View {
     
     // MARK: - Private properties
@@ -28,6 +17,10 @@ struct ContentView: View {
     @State private var tipPercentageIndex: Int = 0
     
     private let tipPercentages: [Int] = [0, 5, 10, 15, 20]
+    
+    private var isTipZero: Bool {
+        return tipPercentageIndex == 0 && checkAmountValue != .zero
+    }
     
     private var checkAmountValue: NSDecimalNumber {
         guard let amountDoubleValue = Double(checkAmount.replacingOccurrences(of: ",", with: ".")),
@@ -85,6 +78,7 @@ struct ContentView: View {
                 Section(header: Text("Total amount*:"),
                         footer: Text("* including tip")) {
                     Text("\(checkAmountValue.adding(tipValue).localizedCurrencyString)")
+                        .foregroundColor(isTipZero ? Color.red : Color.white)
                 }
             }
             .navigationBarTitle("We split")

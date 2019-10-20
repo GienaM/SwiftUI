@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91E2D93A235CF10B005015D4 /* NSDecimalNumber+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2D939235CF10B005015D4 /* NSDecimalNumber+Extension.swift */; };
 		91E5F38823527DC5001B005E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5F38723527DC5001B005E /* AppDelegate.swift */; };
 		91E5F38A23527DC5001B005E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5F38923527DC5001B005E /* SceneDelegate.swift */; };
 		91E5F38C23527DC5001B005E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E5F38B23527DC5001B005E /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91E2D939235CF10B005015D4 /* NSDecimalNumber+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumber+Extension.swift"; sourceTree = "<group>"; };
 		91E5F38423527DC5001B005E /* Day 17-18 WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Day 17-18 WeSplit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E5F38723527DC5001B005E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E5F38923527DC5001B005E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				91E5F38723527DC5001B005E /* AppDelegate.swift */,
 				91E5F38923527DC5001B005E /* SceneDelegate.swift */,
 				91E5F38B23527DC5001B005E /* ContentView.swift */,
+				91E2D939235CF10B005015D4 /* NSDecimalNumber+Extension.swift */,
 				91E5F38D23527DC7001B005E /* Assets.xcassets */,
 				91E5F39223527DC7001B005E /* LaunchScreen.storyboard */,
 				91E5F39523527DC7001B005E /* Info.plist */,
@@ -149,6 +152,7 @@
 				91E5F38823527DC5001B005E /* AppDelegate.swift in Sources */,
 				91E5F38A23527DC5001B005E /* SceneDelegate.swift in Sources */,
 				91E5F38C23527DC5001B005E /* ContentView.swift in Sources */,
+				91E2D93A235CF10B005015D4 /* NSDecimalNumber+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

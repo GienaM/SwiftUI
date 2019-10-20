@@ -13,6 +13,7 @@
 		91B303822357BA76001D9EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B303812357BA76001D9EC3 /* Assets.xcassets */; };
 		91B303852357BA76001D9EC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B303842357BA76001D9EC3 /* Preview Assets.xcassets */; };
 		91B303882357BA76001D9EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B303862357BA76001D9EC3 /* LaunchScreen.storyboard */; };
+		91E2D93D235CF1B9005015D4 /* FlagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2D93C235CF1B9005015D4 /* FlagImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		91B303842357BA76001D9EC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91B303872357BA76001D9EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91B303892357BA76001D9EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91E2D93C235CF1B9005015D4 /* FlagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		91B3037A2357BA75001D9EC3 /* Day 20-22 GuessTheFlag */ = {
 			isa = PBXGroup;
 			children = (
+				91E2D93B235CF1A9005015D4 /* Views */,
 				91B3037B2357BA75001D9EC3 /* AppDelegate.swift */,
 				91B3037D2357BA75001D9EC3 /* SceneDelegate.swift */,
 				91B3037F2357BA75001D9EC3 /* ContentView.swift */,
@@ -73,6 +76,14 @@
 				91B303842357BA76001D9EC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91E2D93B235CF1A9005015D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91E2D93C235CF1B9005015D4 /* FlagImage.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 				91B3037C2357BA75001D9EC3 /* AppDelegate.swift in Sources */,
 				91B3037E2357BA75001D9EC3 /* SceneDelegate.swift in Sources */,
 				91B303802357BA75001D9EC3 /* ContentView.swift in Sources */,
+				91E2D93D235CF1B9005015D4 /* FlagImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
