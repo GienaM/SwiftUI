@@ -14,6 +14,8 @@
 		911EE54023622DBF009CDBBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911EE53F23622DBF009CDBBF /* Preview Assets.xcassets */; };
 		911EE54323622DBF009CDBBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911EE54123622DBF009CDBBF /* LaunchScreen.storyboard */; };
 		914074822365FB1C00AFF7B3 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 914074812365FB1B00AFF7B3 /* SleepCalculator.mlmodel */; };
+		91407487236643F100AFF7B3 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91407486236643F100AFF7B3 /* View+Extension.swift */; };
+		914074892366440B00AFF7B3 /* HCenterer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914074882366440B00AFF7B3 /* HCenterer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		911EE54223622DBF009CDBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		911EE54423622DBF009CDBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		914074812365FB1B00AFF7B3 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
+		91407486236643F100AFF7B3 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		914074882366440B00AFF7B3 /* HCenterer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCenterer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 		911EE53523622DBD009CDBBF /* Day 26-28 BetterRest */ = {
 			isa = PBXGroup;
 			children = (
-				914074812365FB1B00AFF7B3 /* SleepCalculator.mlmodel */,
+				91407485236643E600AFF7B3 /* Extensions */,
+				91407484236643E000AFF7B3 /* ViewModifiers */,
+				91407483236643D100AFF7B3 /* ML */,
 				911EE53623622DBD009CDBBF /* AppDelegate.swift */,
 				911EE53823622DBD009CDBBF /* SceneDelegate.swift */,
 				911EE53A23622DBD009CDBBF /* ContentView.swift */,
@@ -76,6 +82,30 @@
 				911EE53F23622DBF009CDBBF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91407483236643D100AFF7B3 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				914074812365FB1B00AFF7B3 /* SleepCalculator.mlmodel */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
+		91407484236643E000AFF7B3 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				914074882366440B00AFF7B3 /* HCenterer.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		91407485236643E600AFF7B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91407486236643F100AFF7B3 /* View+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +181,9 @@
 			files = (
 				911EE53723622DBD009CDBBF /* AppDelegate.swift in Sources */,
 				914074822365FB1C00AFF7B3 /* SleepCalculator.mlmodel in Sources */,
+				91407487236643F100AFF7B3 /* View+Extension.swift in Sources */,
 				911EE53923622DBD009CDBBF /* SceneDelegate.swift in Sources */,
+				914074892366440B00AFF7B3 /* HCenterer.swift in Sources */,
 				911EE53B23622DBD009CDBBF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
