@@ -13,6 +13,7 @@
 		911EE53D23622DBF009CDBBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911EE53C23622DBF009CDBBF /* Assets.xcassets */; };
 		911EE54023622DBF009CDBBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911EE53F23622DBF009CDBBF /* Preview Assets.xcassets */; };
 		911EE54323622DBF009CDBBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911EE54123622DBF009CDBBF /* LaunchScreen.storyboard */; };
+		914074822365FB1C00AFF7B3 /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 914074812365FB1B00AFF7B3 /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		911EE53F23622DBF009CDBBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		911EE54223622DBF009CDBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		911EE54423622DBF009CDBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		914074812365FB1B00AFF7B3 /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		911EE53523622DBD009CDBBF /* Day 26-28 BetterRest */ = {
 			isa = PBXGroup;
 			children = (
+				914074812365FB1B00AFF7B3 /* SleepCalculator.mlmodel */,
 				911EE53623622DBD009CDBBF /* AppDelegate.swift */,
 				911EE53823622DBD009CDBBF /* SceneDelegate.swift */,
 				911EE53A23622DBD009CDBBF /* ContentView.swift */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				911EE53723622DBD009CDBBF /* AppDelegate.swift in Sources */,
+				914074822365FB1C00AFF7B3 /* SleepCalculator.mlmodel in Sources */,
 				911EE53923622DBD009CDBBF /* SceneDelegate.swift in Sources */,
 				911EE53B23622DBD009CDBBF /* ContentView.swift in Sources */,
 			);
