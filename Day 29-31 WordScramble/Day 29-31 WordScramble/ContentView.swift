@@ -9,26 +9,130 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let people = ["Finn", "Leia", "Luke", "Rey"]
+    
+    // MARK: - Private properties
+    
+    private let words: [String]
+    @State private var usedWords: [String] = []
+    @State private var rootWord: String = ""
+    @State private var newWord: String = ""
+    @State private var errorTitle: String = ""
+    @State private var errorMessage: String = ""
+    @State private var showingError: Bool = false
+    
+    // MARK: - Initialization
+    
+    init() {
+        guard let fileURL = Bundle.main.url(forResource: "start", withExtension: "txt"),
+            let words = try? String(contentsOf: fileURL)
+                .components(separatedBy: .newlines) else {
+                    fatalError("Couldn't locate start.txt file in the app main bundle")
+        }
+        
+        self.words = words
+    }
+    
+    // MARK: - Body
     
     var body: some View {
-        if let fileURL = Bundle.main.url(forResource: "some-file", withExtension: "txt"){
-            if let fileContents = try? String(contentsOf: fileURL) {
-                
+        NavigationView {
+            VStack {
+                TextField("Enter your word", text: $newWord, onCommit: addNewWord)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .autocapitalization(.none)
+                    .padding()
+                List(usedWords, id: \.self) {
+                    Image(systemName: "\($0.count).circle")
+                    Text($0)
+                }
+            }
+            .navigationBarTitle(rootWord)
+            .navigationBarItems(trailing: Button(action: nextWord, label: {
+                Text("Next word")
+            }))
+            .onAppear(perform: startGame)
+            .alert(isPresented: $showingError) {
+                Alert(title: Text(errorTitle),
+                      message: Text(errorMessage),
+                      dismissButton: .default(Text("OK")))
+            }
+        }
+    }
+    
+    // MARK: - Private methods
+    
+    private func startGame() {
+        rootWord = words.randomElement() ?? "silkworm"
+    }
+    
+    private func addNewWord() {
+        // lowercase and trim the word, to make sure we don't add duplicate words with case differences
+        let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // exit if the remaining string is empty
+        guard answer.count > 0 else {
+            return
+        }
+        
+        guard isOriginal(word: answer) else {
+            wordError(title: "Word used already", message: "Be more original.")
+            return
+        }
+        
+        guard isPossible(word: answer) else {
+            wordError(title: "Word not recognized", message: "You can't just make them up!")
+            return
+        }
+        
+        guard isReal(word: answer) else {
+            wordError(title: "Word not possible", message: "That isn't a real word.")
+            return
+        }
+        
+        usedWords.insert(answer, at: 0)
+        newWord = ""
+    }
+    
+    private func nextWord() {
+        usedWords.removeAll()
+        startGame()
+    }
+    
+    private func wordError(title: String, message: String) {
+        errorTitle = title
+        errorMessage = message
+        showingError = true
+    }
+    
+    private func isOriginal(word: String) -> Bool {
+        usedWords.contains(word) == false
+    }
+    
+    private func isPossible(word: String) -> Bool {
+        var rootWord = self.rootWord
+        
+        for letter in word {
+            if let index = rootWord.firstIndex(of: letter) {
+                rootWord.remove(at: index)
+            } else {
+                return false
             }
         }
         
-        let  word = "swift"
+        return true
+    }
+    
+    private func isReal(word: String) -> Bool {
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
-        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
-        let allGood = misspelledRange.location == NSNotFound
+        let misspelledRange = checker
+            .rangeOfMisspelledWord(in: word,
+                                   range: range,
+                                   startingAt: 0,
+                                   wrap: false,
+                                   language: "en")
         
-        
-        
-        return List(people, id: \.self) {
-            Text("\($0)")
-        }
+        return misspelledRange.location == NSNotFound
     }
 }
 

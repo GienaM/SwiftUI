@@ -13,6 +13,7 @@
 		917729F3236E0360008CE83A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917729F2236E0360008CE83A /* Assets.xcassets */; };
 		917729F6236E0360008CE83A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917729F5236E0360008CE83A /* Preview Assets.xcassets */; };
 		917729F9236E0360008CE83A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 917729F7236E0360008CE83A /* LaunchScreen.storyboard */; };
+		91772A01236E1A10008CE83A /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 91772A00236E1A10008CE83A /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		917729F5236E0360008CE83A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		917729F8236E0360008CE83A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		917729FA236E0360008CE83A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91772A00236E1A10008CE83A /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				917729EC236E035E008CE83A /* AppDelegate.swift */,
 				917729EE236E035E008CE83A /* SceneDelegate.swift */,
 				917729F0236E035E008CE83A /* ContentView.swift */,
+				91772A00236E1A10008CE83A /* start.txt */,
 				917729F2236E0360008CE83A /* Assets.xcassets */,
 				917729F7236E0360008CE83A /* LaunchScreen.storyboard */,
 				917729FA236E0360008CE83A /* Info.plist */,
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				917729F9236E0360008CE83A /* LaunchScreen.storyboard in Resources */,
+				91772A01236E1A10008CE83A /* start.txt in Resources */,
 				917729F6236E0360008CE83A /* Preview Assets.xcassets in Resources */,
 				917729F3236E0360008CE83A /* Assets.xcassets in Resources */,
 			);
