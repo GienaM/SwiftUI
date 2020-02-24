@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var usedWords: [String] = []
     @State private var rootWord: String = ""
     @State private var newWord: String = ""
+    @State private var totalScore: Int = 0
     @State private var errorTitle: String = ""
     @State private var errorMessage: String = ""
     @State private var showingError: Bool = false
@@ -44,10 +45,17 @@ struct ContentView: View {
                 List(usedWords, id: \.self) {
                     Image(systemName: "\($0.count).circle")
                     Text($0)
-                }
+                }.gesture(DragGesture().onChanged({ _ in
+                    UIApplication.shared.windows.forEach { $0.endEditing(true) }
+                }))
+                Text("Total score: \(self.totalScore)")
+                    .fontWeight(.semibold)
+                    .modifier(KeyboardObserving())
             }
             .navigationBarTitle(rootWord)
-            .navigationBarItems(trailing: Button(action: nextWord, label: {
+            .navigationBarItems(leading: Button(action: resetScore, label: {
+                Text("Reset score")
+            }),trailing: Button(action: nextWord, label: {
                 Text("Next word")
             }))
             .onAppear(perform: startGame)
@@ -63,6 +71,11 @@ struct ContentView: View {
     
     private func startGame() {
         rootWord = words.randomElement() ?? "silkworm"
+    }
+    
+    private func resetScore() {
+        nextWord()
+        totalScore = 0
     }
     
     private func addNewWord() {
@@ -91,6 +104,7 @@ struct ContentView: View {
         
         usedWords.insert(answer, at: 0)
         newWord = ""
+        calculateScore()
     }
     
     private func nextWord() {
@@ -105,7 +119,7 @@ struct ContentView: View {
     }
     
     private func isOriginal(word: String) -> Bool {
-        usedWords.contains(word) == false
+        usedWords.contains(word) == false && rootWord != word
     }
     
     private func isPossible(word: String) -> Bool {
@@ -132,7 +146,11 @@ struct ContentView: View {
                                    wrap: false,
                                    language: "en")
         
-        return misspelledRange.location == NSNotFound
+        return misspelledRange.location == NSNotFound && word.count > 2
+    }
+    
+    private func calculateScore() {
+        totalScore += (usedWords.reduce(0) { $0 + $1.count } * usedWords.count)
     }
 }
 
